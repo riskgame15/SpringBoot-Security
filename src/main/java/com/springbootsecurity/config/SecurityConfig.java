@@ -1,7 +1,7 @@
 package com.springbootsecurity.config;
 
 
-//import com.springbootsecurity.service.user.IAppUserService;
+import com.springbootsecurity.service.user.IAppUserService;
 import com.springbootsecurity.service.user.IAppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -27,8 +27,8 @@ public class SecurityConfig {
     // xac thuc
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(10);
-//        return NoOpPasswordEncoder.getInstance();
+//        return new BCryptPasswordEncoder(10);
+        return NoOpPasswordEncoder.getInstance();
     }
 
     @Autowired
@@ -39,8 +39,8 @@ public class SecurityConfig {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 //        service phai la 1 instance cua UserDetailService
         authProvider.setUserDetailsService((UserDetailsService) userService);
-//        authProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
-        authProvider.setPasswordEncoder(passwordEncoder());
+        authProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+//        authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
 
