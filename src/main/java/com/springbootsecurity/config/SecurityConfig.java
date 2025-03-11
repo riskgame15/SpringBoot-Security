@@ -1,6 +1,7 @@
 package com.springbootsecurity.config;
 
 
+//import com.springbootsecurity.service.user.IAppUserService;
 import com.springbootsecurity.service.user.IAppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,10 +46,11 @@ public class SecurityConfig {
 
 //    @Bean
 //    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-//        // build pattern
+//        // builder pattern
 //        //        chuyen tu user trong db -  userdetail
-//      UserDetails user = User.withUsername("admin").password("$2a$10$AhRVCCzzASq6tMtLrm8WyuncN4YVOEeEmeoxGRskQxBgdsdXtWEiS").roles("USER").build();
-//      UserDetails admin = User.withUsername("saobekhonglac").password(passwordEncoder().encode("123456")).roles("ADMIN").build();
+////      UserDetails user = User.withUsername("admin").password("$2a$10$AhRVCCzzASq6tMtLrm8WyuncN4YVOEeEmeoxGRskQxBgdsdXtWEiS").roles("USER").build();
+//      UserDetails admin = User.withUsername("mck").password(passwordEncoder().encode("123456")).roles("ADMIN").build();
+//      UserDetails user = User.withUsername("j97").password(passwordEncoder().encode("123456")).roles("USER").build();
 //      return new InMemoryUserDetailsManager(user, admin);
 //    }
 
